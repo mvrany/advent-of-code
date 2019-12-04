@@ -28,12 +28,12 @@ def man_dist(t):
 def get_steps(wire1_go, wire2_go, t):
     wire1_steps = wire1_go.index(t)
     wire2_steps = wire2_go.index(t)
-    if wire1_steps <0 or wire2_steps <0: raise ValueError("intersection not found")
+    if wire1_steps < 0 or wire2_steps < 0: raise ValueError("intersection not found")
     return wire1_steps + wire2_steps + 2
 
 if __name__ == '__main__':
     with open("input/3.txt", "r") as f:
-        raw_data =  f.readlines()
+        raw_data = f.readlines()
     wire1 = raw_data[0].split(sep=",")
     wire2 = raw_data[1].split(sep=",")
     wire1_go = generate_set(wire1)
